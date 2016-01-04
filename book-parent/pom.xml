@@ -8,6 +8,8 @@
 
 	<modules>
 		<module>../book-persist</module>
+		<module>../book-logic</module>
+		<module>../book-ui</module>
 	</modules>
 
 	<properties>

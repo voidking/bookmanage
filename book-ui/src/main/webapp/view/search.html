@@ -1,0 +1,48 @@
+<form role="form">
+	<table class="table">
+		<tr>
+			<td><input type="text" ng-model="name" class="form-control" /></td>
+			<td>
+				<button ng-click="search()" class="btn btn-default">搜索</button>
+			</td>
+		</tr>
+	</table>
+</form>
+<table class="table">
+	<thead>
+		<tr>
+			<th>编号</th>
+			<th>书籍名称</th>
+			<th>作者</th>
+			<th>出版社</th>
+			<th>出版时间</th>
+			<th>价格</th>
+			<th>页数</th>
+			<th>关键字</th>
+			<th>登记时间</th>
+			<th>是否借出</th>
+			<th>备注信息</th>
+			<th>书籍类别</th>
+
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="bookBase in bookBases">
+			<td>{{bookBase.id}}</td>
+			<td>{{bookBase.name}}</td>
+			<td>{{bookBase.author}}</td>
+			<td>{{bookBase.press}}</td>
+			<td>{{bookBase.publishdate}}</td>
+			<td>{{bookBase.price}}</td>
+			<td>{{bookBase.page}}</td>
+			<td>{{bookBase.keyword}}</td>
+			<td>{{bookBase.registerdate}}</td>
+			<td>{{bookBase.borrowed}}</td>
+			<td>{{bookBase.notice}}</td>
+			<td>{{bookBase.bookkind.name}}</td>
+
+			<td><a href="#/bookBase/bookBaseUpdate/{{bookBase.id}}">编辑</a><a
+				ng-click="remove(bookBase.id)">删除</a></td>
+		</tr>
+	</tbody>
+</table>

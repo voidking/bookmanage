@@ -1,0 +1,16 @@
+com\voidking\book\logic\imp\BookKindLogicServiceImpl.class
+com\voidking\book\logic\AdminLogicService.class
+com\voidking\book\logic\imp\SearchLogicServiceImpl.class
+com\voidking\book\logic\ReaderKindLogicService.class
+com\voidking\book\logic\imp\StatisticsLogicServiceImpl.class
+com\voidking\book\logic\BookKindLogicService.class
+com\voidking\book\logic\StatisticsLogicService.class
+com\voidking\book\logic\imp\ReaderKindLogicServiceImpl.class
+com\voidking\book\logic\BorrowInfoLogicService.class
+com\voidking\book\logic\imp\BorrowInfoLogicServiceImpl.class
+com\voidking\book\logic\imp\AdminLogicServiceImpl.class
+com\voidking\book\logic\imp\ReaderBaseLogicServiceImpl.class
+com\voidking\book\logic\imp\BookBaseLogicServiceImpl.class
+com\voidking\book\logic\SearchLogicService.class
+com\voidking\book\logic\ReaderBaseLogicService.class
+com\voidking\book\logic\BookBaseLogicService.class

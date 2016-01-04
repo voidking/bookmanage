@@ -1,0 +1,22 @@
+<div class="alert alert-danger" ng-show="info">{{info}}</div>
+<a href="#/bookKind/bookKindAdd" class="btn btn-default">添加书籍类别</a>
+<table class="table">
+	<thead>
+		<tr>
+			<th>编号</th>
+			<th>类别名称</th>
+			<th>关键词</th>
+			<th>备注信息</th>
+			<th>操作</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="bookKind in bookKinds">
+			<td>{{bookKind.id}}</td>
+			<td>{{bookKind.name}}</td>
+			<td>{{bookKind.keyword}}</td>
+			<td>{{bookKind.notice}}</td>
+			<td><a href="#/bookKind/bookKindUpdate/{{bookKind.id}}">编辑</a><a ng-click="remove(bookKind.id)">删除</a></td>
+		</tr>
+	</tbody>
+</table>

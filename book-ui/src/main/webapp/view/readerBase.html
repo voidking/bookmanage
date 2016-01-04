@@ -1,0 +1,36 @@
+<div class="alert alert-danger" ng-show="info">{{info}}</div>
+<a href="#/readerBase/readerBaseAdd" class="btn btn-default">添加读者基本信息</a>
+<table class="table">
+	<thead>
+		<tr>
+			<th>编号</th>
+			<th>姓名</th>
+			<th>性别</th>
+			<th>工作单位</th>
+			<th>家庭住址</th>
+			<th>电话号码</th>
+			<th>电子邮箱</th>
+			<th>登记日期</th>
+			<th>备注信息</th>
+			<th>读者种类</th>			
+
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="readerBase in readerBases">
+			<td>{{readerBase.id}}</td>
+			<td>{{readerBase.name}}</td>
+			<td>{{readerBase.sex}}</td>
+			<td>{{readerBase.work}}</td>
+			<td>{{readerBase.address}}</td>
+			<td>{{readerBase.telephone}}</td>
+			<td>{{readerBase.email}}</td>
+			<td>{{readerBase.registerdate}}</td>
+			<td>{{readerBase.notice}}</td>
+			<td>{{readerBase.readerkind.name}}</td>
+
+			<td><a href="#/readerBase/readerBaseUpdate/{{readerBase.id}}">编辑</a><a
+				ng-click="remove(readerBase.id)">删除</a></td>
+		</tr>
+	</tbody>
+</table>

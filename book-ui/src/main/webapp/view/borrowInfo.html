@@ -1,0 +1,27 @@
+<div class="alert alert-danger" ng-show="info">{{info}}</div>
+<a href="#/borrowInfo/borrowInfoAdd" class="btn btn-default">添加借阅信息</a>
+<table class="table">
+	<thead>
+		<tr>
+			<th>借阅时间</th>
+			<th>归还时间</th>
+			<th>备注</th>
+			<th>读者编号</th>
+			<th>书籍编号</th>		
+
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="borrowInfo in borrowInfos">
+
+			<td>{{borrowInfo.borrowdate}}</td>
+			<td>{{borrowInfo.returndate}}</td>
+			<td>{{borrowInfo.notice}}</td>
+			<td>{{borrowInfo.readerbaseid}}</td>
+			<td>{{borrowInfo.bookbaseid}}</td>
+
+			<td><a href="#/borrowInfo/borrowInfoUpdate/{{borrowInfo.id}}">编辑</a><a
+				ng-click="remove(borrowInfo.id)">删除</a></td>
+		</tr>
+	</tbody>
+</table>

@@ -1,0 +1,25 @@
+<div class="alert alert-danger" ng-show="info">{{info}}</div>
+<a href="#/readerKind/readerKindAdd" class="btn btn-default">添加读者种类</a>
+<table class="table">
+	<thead>
+		<tr>
+			<th>编号</th>
+			<th>种类名称</th>
+			<th>可借书数量</th>
+			<th>借书期限</th>
+			<th>有效期限</th>
+			<th>备注信息</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="readerKind in readerKinds">
+			<td>{{readerKind.id}}</td>
+			<td>{{readerKind.name}}</td>
+			<td>{{readerKind.quantity}}</td>
+			<td>{{readerKind.validity}}</td>
+			<td>{{readerKind.enddate}}</td>
+			<td>{{readerKind.notice}}</td>
+			<td><a href="#/readerKind/readerKindUpdate/{{readerKind.id}}">编辑</a><a ng-click="remove(readerKind.id)">删除</a></td>
+		</tr>
+	</tbody>
+</table>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="voidking"
+	xmlns:ng="http://angularjs.org" id="ng-app">
+<head>
+<meta charset="UTF-8">
+<title>图书管理系统</title>
+<link rel="stylesheet"
+	href="./bower_components/bootstrap/dist/css/bootstrap.css">
+<script src="./bower_components/angular/angular.js"></script>
+<script src="./bower_components/angular-route/angular-route.min.js"></script>
+<script src="./bower_components/jquery/dist/jquery.min.js"></script>
+<script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./bower_components/es5-shim/es5-shim.js"></script>
+<script
+	src="./bower_components/angular-file-upload/angular-file-upload.min.js"></script>
+<script
+	src="./bower_components/jquery-bootpag/lib/jquery.bootpag.min.js"></script>
+<script src="./js/controller.js"></script>
+<style type="text/css">
+body {
+	font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Lucida Grande",
+		"Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB",
+		"Hiragino Sans GB W3", "Microsoft YaHei UI", "Microsoft YaHei",
+		"WenQuanYi Micro Hei", sans-serif;
+}
+
+h1 {
+	color: white;
+}
+
+a {
+	margin-right: 10px;
+}
+</style>
+</head>
+<body>
+	<div style="background-color: #563d7c; color: #cdbfe3;">
+		<div class="container">
+			<h1>图书管理系统</h1>
+			<p>欢迎使用本系统！游客可以使用部分功能，管理员进行操作请先登陆。</p>
+		</div>
+	</div>
+	<div class="container" style="margin-top: 30px;">
+		<div class="row">
+			<div class="col-md-2">
+				<div class="hidden-print affix-top" role="complementary">
+					<ul class="nav">
+						<li><a href="#/admin/login">管理员登录</a></li>
+						<li><a href="#/readerKind">读者种类管理</a></li>
+						<li><a href="#/readerBase">读者基本信息管理</a></li>
+						<li><a href="#/bookKind">书籍类别管理</a></li>
+						<li><a href="#/bookBase">书籍信息管理</a></li>
+						<li><a href="#/borrowInfo">借阅信息管理</a></li>
+						<li><a href="#/search">图书检索</a></li>
+						<li><a href="#/statistics">统计信息</a></li>						
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-10">
+				<div ng-view></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
